@@ -19,7 +19,7 @@ spec:
         deployment: hello-chris
     spec:
       containers:
-      - image: 'quay.io/cnuland/hello-chris:latest'
+      - image: 'quay.io/<YOUR-QUAY-REPO>/hello-chris:latest'
         name: 'hello-chris'
         ports:
         - containerPort: 8080

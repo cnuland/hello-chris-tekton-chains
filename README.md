@@ -1,10 +1,8 @@
 # Hello Chris Tekton Chains
 
 ## Install
-Run the kustomize file that is in the `cluster-primer` directory using the following oc command
-```
-oc apply -k cluster-primer
-```
+TODO
+
 
 ## Notes
 * You may need to create a git secret so that the git-clone action can access the repo. The password must match a generated dev token from github. The `Task` requires the secret to be there even if the repo is public.
@@ -100,7 +98,5 @@ oc get pods | grep tekton-chains
 oc delete pod <pod-name>
 ```
 
-* You will need to add the public key from the above step to the `ClusterPolicy` found in the kyverno operator directory [image-check.yaml](/k8s/operators/kyverno/base/image-check.yaml)
+* You will need to add the public key from the above step to the `ClusterPolicy` found in the kyverno operator directory [image-check.yaml](/k8s/hello-chris/kyverno/require-signed-image.yaml)
 
-* Follow the instructions for adding an OCI repository to Tekton Chains
-[here](https://docs.openshift.com/container-platform/4.10/cicd/pipelines/using-tekton-chains-for-openshift-pipelines-supply-chain-security.html#creating-and-verifying-task-run-signatures-without-any-additional-authentication_using-tekton-chains-for-openshift-pipelines-supply-chain-security)
